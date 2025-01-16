@@ -26,13 +26,8 @@ export const useFeeDatas = (
   _adapterParams?: string = "0x"
 ) => {
   const dispatch = useDispatch();
-  // console.log("LZ_ADDRESS", LZ_ADDRESS[ChainKey["ZKSYNC"]], ChainId[srceid]);
+
   const ENDPOINT_ADDRESS = LZ_ADDRESS[ChainKey[ChainId[srceid]]];
-  console.log(
-    "LZ_ADDRESS",
-    LZ_ADDRESS[ChainKey[ChainId[srceid]]],
-    ChainId[srceid]
-  );
 
   const endpointContractConfig = {
     address: ENDPOINT_ADDRESS,
@@ -49,7 +44,6 @@ export const useFeeDatas = (
       return key > 0 ? key : null;
     })
     ?.filter((c) => c);
-  console.log("V1_CHAIN_IDS", V1_CHAIN_IDS);
 
   const allcalls = V1_CHAIN_IDS?.map((_chainId) => {
     const destEndpoint = LZ_ADDRESS[ChainKey[ChainId[_chainId]]];
@@ -83,10 +77,9 @@ export const useFeeDatas = (
               contracts: calls,
               chainId: chainConfig?.id,
             });
-            console.log("d", d);
+
             return d;
           } catch (e) {
-            console.log("e", e);
             throw e;
           }
         },
@@ -123,7 +116,7 @@ export const useFeeDatas = (
   if (dataUnion?.length > 0 && srceid) {
     dispatch(feeDataSlice.actions?.setDefaultEndpointFeeData(dataUnion || []));
   }
-  // console.log("result", result.data, result.error, results);
+
   return {
     data: dataUnion,
     refetch: async () => {

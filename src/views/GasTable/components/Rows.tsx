@@ -11,7 +11,6 @@ function Rows({}: Props) {
   const chainMappedData = useAppSelector(
     (state) => state.feeDatas?.defaultEndpointDatas
   );
-  console.log(`🚀 ~ file: Rows.tsx:12 ~ chainMappedData:`, chainMappedData);
 
   return (
     <div>
@@ -26,7 +25,7 @@ function Rows({}: Props) {
         {_.orderBy(chainMappedData, ["data"], ["desc"])?.map((call, idx) => {
           // const [nativeFee = 0, zroFee = 0] = call?.data?.result || [];
           const d = call?.data;
-          console.log("call?.data", call?.data);
+
           return (
             <Row
               key={call?.extra?.key}

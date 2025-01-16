@@ -10,7 +10,7 @@ import {
   sepolia,
   zora,
   arbitrumNova,
-  zkSync,``
+  zkSync,
   kava,
   klaytn,
   celo,
@@ -18,6 +18,21 @@ import {
   astar,
   fuse,
   scroll,
+  bsc,
+  avalanche,
+  gnosis,
+  fantom,
+  coreDao,
+  harmonyOne,
+  moonbeam,
+  moonriver,
+  linea,
+  metis,
+  mantle,
+  confluxESpace,
+  canto,
+  polygonZkEvm,
+  tenet,
 } from "wagmi/chains";
 import {
   ChainId as LZChainId,
@@ -37,6 +52,147 @@ export const wagmiconfig = createConfig({
         logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
       },
     },
+
+    {
+      ...arbitrum,
+      custom: {
+        V1_EID: LZChainId.ARBITRUM,
+        CHAIN_ID: LZChainId[LZChainId.ARBITRUM],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.ARBITRUM]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.ARBITRUM]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...bsc,
+      custom: {
+        V1_EID: LZChainId.BSC,
+        CHAIN_ID: LZChainId[LZChainId.BSC],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.BSC]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.BSC]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...avalanche,
+      custom: {
+        V1_EID: LZChainId.AVALANCHE,
+        CHAIN_ID: LZChainId[LZChainId.AVALANCHE],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.AVALANCHE]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.AVALANCHE]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...gnosis,
+      custom: {
+        V1_EID: LZChainId.GNOSIS,
+        CHAIN_ID: LZChainId[LZChainId.GNOSIS],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.GNOSIS]],
+        V1_ENDPOINT: "0x9740FF91F1985D8d2B71494aE1A2f723bb3Ed9E4",
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...fantom,
+      custom: {
+        V1_EID: LZChainId.FANTOM,
+        CHAIN_ID: LZChainId[LZChainId.FANTOM],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.FANTOM]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.FANTOM]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...coreDao,
+      custom: {
+        V1_EID: LZChainId.COREDAO,
+        CHAIN_ID: LZChainId[LZChainId.COREDAO],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.COREDAO]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.COREDAO]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...harmonyOne,
+      custom: {
+        V1_EID: LZChainId.HARMONY,
+        CHAIN_ID: LZChainId[LZChainId.HARMONY],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.HARMONY]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.HARMONY]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...moonbeam,
+      custom: {
+        V1_EID: LZChainId.MOONBEAM,
+        CHAIN_ID: LZChainId[LZChainId.MOONBEAM],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.MOONBEAM]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.MOONBEAM]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...moonriver,
+      custom: {
+        V1_EID: LZChainId.MOONRIVER,
+        CHAIN_ID: LZChainId[LZChainId.MOONRIVER],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.MOONRIVER]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.MOONRIVER]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...metis,
+      custom: {
+        V1_EID: LZChainId.METIS,
+        CHAIN_ID: LZChainId[LZChainId.METIS],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.METIS]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.METIS]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...mantle,
+      custom: {
+        V1_EID: LZChainId.MANTLE,
+        CHAIN_ID: LZChainId[LZChainId.MANTLE],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.MANTLE]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.MANTLE]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...confluxESpace,
+      custom: {
+        V1_EID: LZChainId.CONFLUX,
+        CHAIN_ID: LZChainId[LZChainId.CONFLUX],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.CONFLUX]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.CONFLUX]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...canto,
+      custom: {
+        V1_EID: LZChainId.CANTO,
+        CHAIN_ID: LZChainId[LZChainId.CANTO],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.CANTO]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.CANTO]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
+    {
+      ...tenet,
+      custom: {
+        V1_EID: LZChainId.TENET,
+        CHAIN_ID: LZChainId[LZChainId.TENET],
+        CHAIN_KEY: ChainKey[LZChainId[LZChainId.TENET]],
+        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.TENET]]],
+        logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/ethereum.jpg",
+      },
+    },
     {
       ...kava,
       custom: {
@@ -53,7 +209,7 @@ export const wagmiconfig = createConfig({
         V1_EID: LZChainId.BASE,
         CHAIN_ID: LZChainId[LZChainId.BASE],
         CHAIN_KEY: ChainKey[LZChainId[LZChainId.BASE]],
-        V1_ENDPOINT: LZ_ADDRESS[ChainKey[LZChainId[LZChainId.BASE]]],
+        V1_ENDPOINT: "0xb6319cC6c8c27A8F5dAF0dD3DF91EA35C4720dd7",
         logo: "https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/kava.svg",
       },
     },
